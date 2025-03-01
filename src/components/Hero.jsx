@@ -49,7 +49,7 @@ const Hero = () => {
       {/* inner main category div which gonna hold the all content */}
       <div className=" h-full w-full bg-steel-gray rounded-[30px] p-3 flex flex-col items-center justify-between gap-4 xl:flex-row">
         {/* left part */}
-        <div className="h-[97%] w-[98%] overflow-hidden bg-steel-gray p-4 flex flex-col justify-between">
+        <div className="h-[95%] w-[98%] overflow-hidden bg-steel-gray p-4 flex flex-col justify-between">
           <div>
             {/* welcome blur text */}
             <div>
@@ -121,7 +121,7 @@ const Hero = () => {
         </div>
 
         {/* right part */}
-        <div className="h-[90%] w-[98%] bg-grayish overflow-hidden ">
+        <div className="h-[95%] w-[98%] bg-grayish overflow-hidden ">
           hello this is right part
         </div>
       </div>
