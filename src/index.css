@@ -1,17 +1,122 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gray: #928dab;
+  /* for first section */
+  --color-grayish: #928dab;
   --color-steel-gray: #1f1c2c;
+  --color-taupe: #d8b6a4;
+
+  /* for 2nd section */
   --color-desert-sand: #f87060;
   --color-dark-blue: #102542;
+
+  /* for 3rd section */
   --color-soft-sage: #abc8a2;
   --color-deep-olive: #1a2417;
+
+  /* for 4th section */
   --color-mint-whisper: #d7eae2;
   --color-dark-mustard: #4b421b;
+
+  /* for 5th section */
   --color-vanilla-latte: #f3e5c3;
   --color-teal-forest: #174e4f;
+
+  /* Font family definitions */
+  --font-zentry: "zentry", sans-serif;
+  --font-general: "general", sans-serif;
+  --font-circular-web: "circular-web", sans-serif;
+  --font-robert-medium: "robert-medium", sans-serif;
+  --font-robert-regular: "robert-regular", sans-serif;
 }
 
-@layer components {
+@layer base {
+  @font-face {
+    font-family: "circular-web";
+    src: url("/fonts/circularweb-book.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "general";
+    src: url("/fonts/general.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "robert-medium";
+    src: url("/fonts/robert-medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "robert-regular";
+    src: url("/fonts/robert-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "zentry";
+    src: url("/fonts/zentry-regular.woff2") format("woff2");
+  }
+}
+
+@layer utilities {
+  /* Smaller squares (10px) */
+  .bg-graph-paper-sm {
+    background-image: linear-gradient(
+        to right,
+        var(--color-gray) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, var(--color-gray) 1px, transparent 1px);
+    background-size: 10px 10px;
+    background-color: var(--color-mint-whisper);
+  }
+
+  /* Larger squares (40px) */
+  .bg-graph-paper-lg {
+    background-image: linear-gradient(
+        to right,
+        var(--color-grayish) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, var(--color-grayish) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-color: var(--color-deep-olive);
+  }
+
+  /* Multiple grid sizes with different colors */
+  .bg-graph-paper-multi {
+    background-image: linear-gradient(
+        to right,
+        var(--color-dark-blue) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, var(--color-dark-blue) 1px, transparent 1px),
+      linear-gradient(
+        to right,
+        var(--color-desert-sand) 0.5px,
+        transparent 0.5px
+      ),
+      linear-gradient(
+        to bottom,
+        var(--color-desert-sand) 0.5px,
+        transparent 0.5px
+      );
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-color: var(--color-vanilla-latte);
+  }
+
+  .variable-proximity {
+    font-family: "Roboto Flex", sans-serif;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 }
