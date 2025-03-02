@@ -5,6 +5,21 @@ import VariableProximity from "./VariableProximity";
 import RotatingText from "./RotatingText";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import BounceCards from "./BounceCards";
+import v0 from "../assets/v0.png";
+import v1 from "../assets/v1.jpg";
+import v2 from "../assets/v2.jpg";
+import v3 from "../assets/v3.png";
+
+const images = [v3, v1, v2, v0];
+
+const transformStyles = [
+  "rotate(5deg) translate(-150px)",
+  "rotate(0deg) translate(-70px)",
+  "rotate(-5deg)",
+  "rotate(5deg) translate(70px)",
+  "rotate(-5deg) translate(150px)",
+];
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -121,8 +136,26 @@ const Hero = () => {
         </div>
 
         {/* right part */}
-        <div className="h-[95%] w-[98%] bg-grayish overflow-hidden ">
-          hello this is right part
+        <div className="h-[95%] w-[98%] overflow-hidden">
+          {/* div -- where my images will reside */}
+          <div className="h-[48%] m-2 bg-grayish rounded-3xl flex items-center justify-center overflow-hidden">
+            <div className="h-[80%] w-[70%]">
+              <BounceCards
+                className="custom-bounceCards"
+                images={images}
+                containerWidth={500}
+                containerHeight={250}
+                animationDelay={1}
+                animationStagger={0.1}
+                easeType="elastic.out(1, 0.5)"
+                transformStyles={transformStyles}
+                enableHover={true}
+              />
+            </div>
+          </div>
+
+          {/* here is the introduction */}
+          <div className="h-[48%] m-2 bg-grayish rounded-3xl"></div>
         </div>
       </div>
     </section>
