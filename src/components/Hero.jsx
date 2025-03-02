@@ -121,7 +121,7 @@ const Hero = () => {
   return (
     <section
       ref={mainSectionRef}
-      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-hero px-8 pt-10 pb-3"
+      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-hero px-8 pt-10 pb-3 selection:bg-lavender selection:text-steel-gray"
     >
       {/* inner main category div which gonna hold the all content */}
       <div

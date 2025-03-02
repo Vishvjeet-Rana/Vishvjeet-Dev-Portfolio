@@ -6,6 +6,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import TextPressure from "./TextPressure";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const imgRef = useRef(null);
@@ -27,28 +30,37 @@ const About = () => {
     }
   };
 
-  // animations for left part of about section Img and Text
+  // animations for left part of about section Img and Text and when the about section comes into viewport
   useGSAP(() => {
-    const tl = gsap.timeline({ duration: 0.1, ease: "power2.inOut" });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: mainSectionRef.current,
+        start: "top center", // Triggers when the section is fully visible
+        end: "bottom center",
+        toggleActions: "play none none reverse", // Plays animation when entering, reverses when leaving
+        once: true, // Ensures animation only plays once
+      },
+    });
 
     tl.fromTo(
       imgRef.current,
       { opacity: 0, scale: 0.8, x: -150 },
       { opacity: 1, scale: 1, x: 0, duration: 2 },
-      0
+      0.2
     );
 
     tl.fromTo(
       leftTextRef.current,
       { opacity: 0, scale: 0.8, x: 150 },
       { opacity: 1, scale: 1, x: 0, duration: 2 },
-      0
+      0.3
     );
   }, []);
 
   // this section for scrolling effect of whole main section
   useGSAP(() => {
     const tl = gsap.timeline({
+      duration: 0.5,
       scrollTrigger: {
         trigger: mainSectionRef.current,
         start: "top top",
@@ -59,11 +71,23 @@ const About = () => {
       },
     });
 
-    // Hero Section Scroll Effect
+    // Breaking glass effect
+    tl.fromTo(
+      mainSectionRef.current,
+      { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }, // Full rectangle
+      {
+        clipPath:
+          "polygon(10% 10%, 90% 0%, 100% 50%, 90% 100%, 10% 90%, 0% 50%)", // Broken glass effect
+        filter: "blur(5px)",
+        opacity: 0.6,
+        ease: "power2.inOut",
+      }
+    );
+
     tl.to(mainSectionRef.current, {
       scale: 0.9,
-      opacity: 0.6,
-      filter: "blur(10px)",
+      filter: "blur(8px)",
+      opacity: 0.3,
       ease: "power2.inOut",
     });
   }, []);
@@ -71,7 +95,7 @@ const About = () => {
   return (
     <section
       ref={mainSectionRef}
-      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-about p-5"
+      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-about p-5 selection:bg-smoky"
     >
       <div className="h-full w-full bg-dark-blue rounded-[30px] p-3 flex flex-col items-center justify-around gap-4 xl:flex-row">
         {/* left part - holding images and texts */}
@@ -149,7 +173,7 @@ const About = () => {
           </div>
 
           {/* second div holding all data about "about me" */}
-          <div className="h-[75%] w-[85%] sm:p-2 ">
+          <div ref={addToTextRefs} className="h-[75%] w-[85%] sm:p-2 ">
             <p className="font-bold font-robert-medium text-desert-sand text-sm sm:text-xl sm:mt-4 sm:mb-4">
               Hey there! I'm{" "}
               <span className="font-extrabold text-muted-teal">
@@ -161,7 +185,7 @@ const About = () => {
               in the MERN stack — building everything from sleek frontends to
               powerful backends.
             </p>
-            <p className="font-bold font-robert-medium text-desert-sand text-sm sm:text-xl sm:mb-4">
+            <p className="hidden sm:block font-bold font-robert-medium text-desert-sand text-sm sm:text-xl sm:mb-4">
               But that's not all — I'm also diving into the exciting world of AI
               and exploring how technology can push boundaries. Whether it's
               designing pixel-perfect UIs, writing clean APIs, or experimenting
