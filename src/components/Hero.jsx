@@ -78,7 +78,7 @@ const Hero = () => {
         ease: "elastic.out(1, 0.6)",
         immediateRender: false,
       },
-      0 // Start after a 0.5 second delay
+      0.2 // Start after a 0.5 second delay
     );
 
     // First, animate the BlurText (Namaste) immediately
@@ -106,7 +106,7 @@ const Hero = () => {
       containerRef.current,
       { opacity: 0, scale: 0.8, y: 50 },
       { opacity: 1, scale: 1, y: 0, duration: 0.7 },
-      "start+=0.5" // Start after the main section animation
+      "start+=0.2" // Start after the main section animation
     );
 
     // Animation for small text under Namaste with the same delay
@@ -114,14 +114,14 @@ const Hero = () => {
       textRef.current,
       { opacity: 0, scale: 0.8, y: 50 },
       { opacity: 1, scale: 1, y: 0, duration: 0.7 },
-      "start+=0.8" // Start at the same time as VariableProximity
+      "start+=0.3" // Start at the same time as VariableProximity
     );
   }, []);
 
   return (
     <section
       ref={mainSectionRef}
-      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg px-8 pt-10 pb-3"
+      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-hero px-8 pt-10 pb-3"
     >
       {/* inner main category div which gonna hold the all content */}
       <div
@@ -206,7 +206,7 @@ const Hero = () => {
         <div className="h-[95%] w-[98%] overflow-hidden">
           {/* div -- where my images will reside */}
           <div className="h-[48%] m-2 bg-grayish rounded-3xl flex items-center justify-center overflow-hidden">
-            <div className="h-[80%] w-[90%] flex items-center justify-center">
+            <div className="h-[80%] w-[90%]  m-5">
               <BounceCards
                 className="custom-bounceCards w-full h-full"
                 images={images}

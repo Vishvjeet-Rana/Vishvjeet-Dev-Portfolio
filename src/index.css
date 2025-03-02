@@ -11,6 +11,8 @@
   /* for 2nd section */
   --color-desert-sand: #f87060;
   --color-dark-blue: #102542;
+  --color-cream-white: #f5f5f5;
+  --color-muted-teal: #57b8ab;
 
   /* for 3rd section */
   --color-soft-sage: #abc8a2;
@@ -30,6 +32,21 @@
   --font-circular-web: "circular-web", sans-serif;
   --font-robert-medium: "robert-medium", sans-serif;
   --font-robert-regular: "robert-regular", sans-serif;
+}
+
+/* global css */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-steel-gray);
+  overflow-x: hidden;
 }
 
 @layer base {
@@ -73,7 +90,7 @@
   }
 
   /* Larger squares (40px) */
-  .bg-graph-paper-lg {
+  .bg-graph-paper-lg-hero {
     background-image: linear-gradient(
         to right,
         var(--color-grayish) 1px,
@@ -82,6 +99,17 @@
       linear-gradient(to bottom, var(--color-grayish) 1px, transparent 1px);
     background-size: 40px 40px;
     background-color: var(--color-deep-olive);
+  }
+
+  .bg-graph-paper-lg-about {
+    background-image: linear-gradient(
+        to right,
+        var(--color-desert-sand) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, var(--color-desert-sand) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-color: var(--color-dark-blue);
   }
 
   /* Multiple grid sizes with different colors */
