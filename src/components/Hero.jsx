@@ -10,6 +10,9 @@ import v0 from "../assets/v0.png";
 import v1 from "../assets/v1.jpg";
 import v2 from "../assets/v2.jpg";
 import v3 from "../assets/v3.png";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const images = [v3, v1, v2, v0];
 
@@ -24,56 +27,120 @@ const transformStyles = [
 const Hero = () => {
   const containerRef = useRef(null);
   const textRef = useRef(null);
+  const sectionRef = useRef(null);
+  const mainSectionRef = useRef(null);
+  const blurTextRef = useRef(null);
 
-  // for the animation of the VariableProximity text
+  // this section for scrolling effect of whole main section
   useGSAP(() => {
-    // GSAP animation for the VariableProximity text
-    gsap.fromTo(
-      containerRef.current,
-      { opacity: 0, scale: 0.8, y: 50 }, // Starting animation properties
-      {
-        opacity: 1,
-        scale: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 0.5, // Delay to sync with other animations
-      }
-    );
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: mainSectionRef.current,
+        start: "top top",
+        end: "+=100%",
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
+
+    // Hero Section Scroll Effect
+    tl.to(mainSectionRef.current, {
+      scale: 0.9,
+      opacity: 0.6,
+      filter: "blur(10px)",
+      ease: "power2.inOut",
+    });
   }, []);
 
-  // for the animation of the small text under namaste
+  // this animation for hero section
   useGSAP(() => {
-    // GSAP animation for the VariableProximity text
-    gsap.fromTo(
-      textRef.current,
-      { opacity: 0, scale: 0.8, y: 50 }, // Starting animation properties
+    const tl = gsap.timeline({ duration: 0.1, ease: "power2.inOut" });
+
+    // Then, add a small delay before starting the main section animation
+    tl.fromTo(
+      sectionRef.current,
       {
+        scaleY: 0,
+        transformOrigin: "top",
+        opacity: 0,
+        skewY: 10,
+        filter: "blur(20px)",
+        boxShadow: "0px 0px 50px rgba(0, 0, 0, 0.8)",
+      },
+      {
+        scaleY: 1,
         opacity: 1,
-        scale: 1,
+        skewY: 0,
+        filter: "blur(0px)",
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
+        duration: 1.8,
+        ease: "elastic.out(1, 0.6)",
+        immediateRender: false,
+      },
+      0 // Start after a 0.5 second delay
+    );
+
+    // First, animate the BlurText (Namaste) immediately
+    gsap.set(blurTextRef.current.querySelectorAll(".blur-text span"), {
+      filter: "blur(10px)",
+      opacity: 0,
+      y: -50,
+    });
+
+    tl.to(
+      blurTextRef.current.querySelectorAll(".blur-text span"),
+      {
+        filter: "blur(0px)",
+        opacity: 1,
         y: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        delay: 0.5, // Delay to sync with other animations
-      }
+        stagger: 0.05,
+        duration: 0.7,
+        ease: "power2.out",
+      },
+      0.5 // Start immediately at timeline position 0
+    );
+
+    // Animation for VariableProximity text with delay
+    tl.fromTo(
+      containerRef.current,
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.7 },
+      "start+=0.5" // Start after the main section animation
+    );
+
+    // Animation for small text under Namaste with the same delay
+    tl.fromTo(
+      textRef.current,
+      { opacity: 0, scale: 0.8, y: 50 },
+      { opacity: 1, scale: 1, y: 0, duration: 0.7 },
+      "start+=0.8" // Start at the same time as VariableProximity
     );
   }, []);
 
   return (
-    <section className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg px-8 pt-10 pb-3">
+    <section
+      ref={mainSectionRef}
+      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg px-8 pt-10 pb-3"
+    >
       {/* inner main category div which gonna hold the all content */}
-      <div className=" h-full w-full bg-steel-gray rounded-[30px] p-3 flex flex-col items-center justify-between gap-4 xl:flex-row">
+      <div
+        ref={sectionRef}
+        className=" h-full w-full bg-steel-gray rounded-[30px] p-3 flex flex-col items-center justify-between gap-4 xl:flex-row"
+      >
         {/* left part */}
         <div className="h-[95%] w-[98%] overflow-hidden bg-steel-gray p-4 flex flex-col justify-between">
           <div>
             {/* welcome blur text */}
             <div>
               <BlurText
+                ref={blurTextRef}
                 text="Namaste"
-                delay={500}
+                delay={0.05}
                 animateBy="words"
                 direction="top"
                 className="text-5xl sm:text-6xl font-zentry font-extrabold text-grayish"
+                useExternalAnimation={true}
               />
             </div>
 
