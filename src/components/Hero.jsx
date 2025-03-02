@@ -139,12 +139,12 @@ const Hero = () => {
         <div className="h-[95%] w-[98%] overflow-hidden">
           {/* div -- where my images will reside */}
           <div className="h-[48%] m-2 bg-grayish rounded-3xl flex items-center justify-center overflow-hidden">
-            <div className="h-[80%] w-[70%]">
+            <div className="h-[80%] w-[90%] flex items-center justify-center">
               <BounceCards
-                className="custom-bounceCards"
+                className="custom-bounceCards w-full h-full"
                 images={images}
-                containerWidth={500}
-                containerHeight={250}
+                containerWidth={window.innerWidth < 768 ? 300 : 500} // Mobile vs Desktop
+                containerHeight={window.innerWidth < 768 ? 150 : 250}
                 animationDelay={1}
                 animationStagger={0.1}
                 easeType="elastic.out(1, 0.5)"
@@ -155,7 +155,20 @@ const Hero = () => {
           </div>
 
           {/* here is the introduction */}
-          <div className="h-[48%] m-2 bg-grayish rounded-3xl"></div>
+          <div className="h-[48%] m-2 bg-grayish rounded-3xl overflow-hidden flex items-center justify-center">
+            <div className="h-full w-full p-2 rounded-3xl sm:flex sm:flex-col sm:items-start sm:justify-around ">
+              <h2 className="font-robert-medium font-extrabold text-2xl text-steel-gray sm:text-5xl ">
+                Hello, I'm
+              </h2>
+              <p className="font-zentry font-extrabold text-xl text-steel-gray sm:text-5xl">
+                Vishvjeet Rana
+              </p>
+              <p className="font-robert-medium font-semibold text-lg text-smoky sm:text-2xl">
+                I am a Full Stack MERN Developer. And, I Love to talk about Web
+                Dev and AI.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
