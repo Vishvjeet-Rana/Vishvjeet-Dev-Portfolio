@@ -5,7 +5,7 @@ function App() {
   return (
     <section>
       <Hero />
-      <About />
+      {/* <About /> */}
     </section>
   );
 }

@@ -2,29 +2,20 @@
 
 @theme {
   /* for first section */
-  --color-grayish: #928dab;
-  --color-steel-gray: #1f1c2c;
-  --color-taupe: #d8b6a4;
-  --color-lavender: #b39ddb;
-  --color-smoky: #c4bccf;
 
-  /* for 2nd section */
-  --color-desert-sand: #f87060;
-  --color-dark-blue: #102542;
-  --color-cream-white: #f5f5f5;
-  --color-muted-teal: #57b8ab;
+  --color-carbon-mist: #121212;
+  --color-alpine-frost: #f5f5f7;
+  --color-silicon: #a1a1a6;
+  --color-blue-tint: #2997ff;
 
-  /* for 3rd section */
+  --color-vanilla-latte: #f3e5c3;
+  --color-teal-forest: #174e4f;
+
   --color-soft-sage: #abc8a2;
   --color-deep-olive: #1a2417;
 
-  /* for 4th section */
-  --color-mint-whisper: #d7eae2;
-  --color-dark-mustard: #4b421b;
-
-  /* for 5th section */
-  --color-vanilla-latte: #f3e5c3;
-  --color-teal-forest: #174e4f;
+  --color-lavender: #b39ddb;
+  --color-smoky: #c4bccf;
 
   /* Font family definitions */
   --font-zentry: "zentry", sans-serif;
@@ -77,6 +68,11 @@ body {
 }
 
 @layer utilities {
+  .spline-wrapper canvas {
+    transform: scale(1.05); /* Scale slightly bigger to hide the logo */
+    transform-origin: bottom right; /* Focus scaling from the bottom-right corner */
+  }
+
   /* Smaller squares (10px) */
   .bg-graph-paper-sm {
     background-image: linear-gradient(

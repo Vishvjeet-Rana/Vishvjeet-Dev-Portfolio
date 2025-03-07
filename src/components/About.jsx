@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About = () => {
+const About = ({ className }) => {
   const imgRef = useRef(null);
   const leftTextRef = useRef([]);
   const mainSectionRef = useRef(null);
@@ -95,7 +95,7 @@ const About = () => {
   return (
     <section
       ref={mainSectionRef}
-      className="h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-about p-5 selection:bg-smoky"
+      className={`${className}"h-dvh w-screen overflow-x-hidden bg-graph-paper-lg-about p-5 selection:bg-smoky"`}
     >
       <div className="h-full w-full bg-dark-blue rounded-[30px] p-3 flex flex-col items-center justify-around gap-4 xl:flex-row">
         {/* left part - holding images and texts */}

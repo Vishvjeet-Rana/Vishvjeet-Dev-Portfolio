@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@react-spring/web": "^9.5.1",
+    "@react-spring/web": "^9.7.5",
     "@tailwindcss/vite": "^4.0.9",
     "framer-motion": "^12.4.7",
     "gsap": "^3.12.7",
