@@ -124,7 +124,7 @@ const Hero = () => {
                 ref={firstItemRef}
                 className="mt-10 flex flex-col  justify-center"
               >
-                <p className="text-lg sm:text-xl font-robert-medium text-carbon-mist">
+                <p className="text-lg sm:text-xl font-robert-medium font-semibold text-carbon-mist">
                   Contact:
                 </p>
                 <p className="text-lg sm:text-xl font-robert-medium text-carbon-mist">
@@ -139,14 +139,14 @@ const Hero = () => {
                 ref={secondItemRef}
                 className="mt-10 flex flex-col justify-center"
               >
-                <p className="text-lg sm:text-xl font-robert-medium text-carbon-mist">
+                <p className="text-lg sm:text-xl font-robert-medium font-semibold text-carbon-mist">
                   My Location:
                 </p>
                 <p className="text-lg sm:text-xl font-robert-medium text-carbon-mist">
                   <a
                     href="https://www.google.com/maps?q=29.68727901062938,76.9901177257675"
                     target="_blank"
-                    class="text-lg sm:text-xl font-robert-medium text-carbon-mist"
+                    className="text-lg sm:text-xl font-robert-medium text-carbon-mist"
                   >
                     Location: 29.6873° N, 76.9901° E
                   </a>
