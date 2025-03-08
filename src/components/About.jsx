@@ -78,13 +78,13 @@ const About = () => {
 
             {/* whole about me text */}
             <div className="flex-col items-start justify-start mt-10 h-[70%] pr-5">
-              <p className="font-robert-medium text-sm sm:text-2xl mb-5 text-metallic-gray">
-                Hey, I'm Vishvjeet Rana — a Full stack web developer who enjoys
-                building web applications with clean design and smooth
-                functionality. I specialize in crafting seamless digital
-                experiences by blending creativity with efficient
-                problem-solving. Occasionally I work with Three js for giving 3D
-                and realistic feel to websites.
+              <p className="font-robert-medium text-sm sm:text-2xl text-metallic-gray">
+                Hey, I'm <span className="text-blue-tint">Vishvjeet Rana</span>{" "}
+                — a Full Stack Web Developer who enjoys building web
+                applications with clean design and smooth functionality. I
+                specialize in crafting seamless digital experiences by blending
+                creativity with efficient problem-solving. Occasionally I work
+                with Three js for giving 3D and realistic feel to websites.
               </p>
               <p className="font-robert-medium text-sm sm:text-2xl text-metallic-gray">
                 I'm diving into the world of AI to add smarter features to

@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "./Carousel";
+import TrueFocus from "./TrueFocus";
 
 const Projects = () => {
   return (
@@ -7,10 +8,24 @@ const Projects = () => {
       <div className="h-[100%] w-[100%] bg-carbon-mist flex items-center justify-center">
         <div className="w-full h-full  flex items-center justify-center flex-col">
           {/* part 1 - text */}
-          <div className="h-[20%] w-[80%]  flex items-center justify-start">
-            <p className="text-6xl sm:text-[5rem] text-metallic-gray font-robert-medium font-extrabold">
+          <div className="h-[20%] w-[80%] flex items-center justify-start">
+            {/* <p className="text-6xl sm:text-[5rem] text-metallic-gray font-robert-medium font-extrabold">
               Featured projects
-            </p>
+            </p> */}
+
+            <div>
+              <TrueFocus
+                sentence="Featured projects"
+                manualMode={false}
+                blurAmount={5}
+                borderColor="#7d7d81"
+                animationDuration={2}
+                pauseBetweenAnimations={1}
+                className={
+                  "text-6xl sm:text-[5rem] text-metallic-gray font-robert-medium font-extrabold"
+                }
+              />
+            </div>
           </div>
 
           {/* part 2 - glassmorphic div */}
