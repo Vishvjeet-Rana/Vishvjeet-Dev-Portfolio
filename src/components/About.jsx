@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   return (
     <section className="h-dvh w-screen overflow-x-hidden">
-      <div className=" h-[100%] w-[100%] bg-carbon-mist flex flex-col sm:flex-row items-center justify-center">
+      <div className="h-[100%] w-[100%] bg-carbon-mist flex flex-col sm:flex-row items-center justify-center">
         {/* left part */}
         <div className="w-[100%] h-[50%] sm:w-[50%] sm:h-[100%] flex flex-col items-center justify-end">
           {/* first text */}
@@ -22,7 +22,7 @@ const About = () => {
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-6xl sm:text-9xl text-alpine-frost font-robert-medium font-extrabold"
+                className="text-6xl sm:text-9xl text-alpine-frost pl-5 font-robert-medium font-extrabold"
               />
             </div>
           </div>
@@ -34,7 +34,7 @@ const About = () => {
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-6xl sm:text-9xl text-blue-tint font-robert-medium font-extrabold ml-10 sm:ml-20"
+                className="text-6xl sm:text-9xl text-blue-tint font-robert-medium font-extrabold ml-15 sm:ml-25"
               />
             </div>
           </div>
@@ -46,7 +46,7 @@ const About = () => {
                 delay={150}
                 animateBy="words"
                 direction="top"
-                className="text-6xl sm:text-9xl text-alpine-frost font-robert-medium font-extrabold ml-20 sm:ml-40"
+                className="text-6xl sm:text-9xl text-alpine-frost font-robert-medium font-extrabold ml-25 sm:ml-45"
               />
             </div>
           </div>
@@ -81,10 +81,10 @@ const About = () => {
               <p className="font-robert-medium text-sm sm:text-2xl mb-5 text-metallic-gray">
                 Hey, I'm Vishvjeet Rana — a Full stack web developer who enjoys
                 building web applications with clean design and smooth
-                functionality. I work with React on the front end and Node.js on
-                the back end to create seamless digital experiences.
-                Occasionally I work with Three js for giving 3D and realistic
-                feel to websites.
+                functionality. I specialize in crafting seamless digital
+                experiences by blending creativity with efficient
+                problem-solving. Occasionally I work with Three js for giving 3D
+                and realistic feel to websites.
               </p>
               <p className="font-robert-medium text-sm sm:text-2xl text-metallic-gray">
                 I'm diving into the world of AI to add smarter features to

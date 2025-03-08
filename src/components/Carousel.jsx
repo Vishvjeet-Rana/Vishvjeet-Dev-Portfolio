@@ -31,6 +31,27 @@ const projects = [
     demoLink: "https://demo4.example.com",
     codeLink: "https://github.com/example/project4",
   },
+  {
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    title: "Project Four",
+    description: "AI-powered analytics dashboard for businesses",
+    demoLink: "https://demo4.example.com",
+    codeLink: "https://github.com/example/project4",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    title: "Project Four",
+    description: "AI-powered analytics dashboard for businesses",
+    demoLink: "https://demo4.example.com",
+    codeLink: "https://github.com/example/project4",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    title: "Project Four",
+    description: "AI-powered analytics dashboard for businesses",
+    demoLink: "https://demo4.example.com",
+    codeLink: "https://github.com/example/project4",
+  },
 ];
 
 const Carousel = () => {
@@ -44,7 +65,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative max-w-[90vw] mx-auto">
+    <div className="relative max-w-[60vw] mx-auto">
       <div
         ref={scrollRef}
         className="flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth py-4"
@@ -57,14 +78,14 @@ const Carousel = () => {
 
       <button
         onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[#121212] text-[#f5f5f7] p-2 rounded-full shadow-lg hover:bg-[#7d7d81] transition-colors"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-alpine-frost text-carbon-mist p-2 rounded-full shadow-lg hover:bg-[#7d7d81] transition-colors"
       >
         <ChevronLeft size={24} />
       </button>
 
       <button
         onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[#121212] text-[#f5f5f7] p-2 rounded-full shadow-lg hover:bg-[#7d7d81] transition-colors"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-alpine-frost text-carbon-mist p-2 rounded-full shadow-lg hover:bg-[#7d7d81] transition-colors"
       >
         <ChevronRight size={24} />
       </button>

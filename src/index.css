@@ -10,6 +10,7 @@
   --color-metallic-gray: #7d7d81;
 
   --color-vanilla-latte: #f3e5c3;
+  --color-dark-vanilla: #756551;
   --color-teal-forest: #174e4f;
 
   --color-soft-sage: #abc8a2;
@@ -32,6 +33,17 @@ html {
   -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
 }
 
 body {
