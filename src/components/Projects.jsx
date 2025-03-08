@@ -21,9 +21,6 @@ const Projects = () => {
                 borderColor="#7d7d81"
                 animationDuration={2}
                 pauseBetweenAnimations={1}
-                className={
-                  "text-6xl sm:text-[5rem] text-metallic-gray font-robert-medium font-extrabold"
-                }
               />
             </div>
           </div>
