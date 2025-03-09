@@ -6,7 +6,7 @@ import "./Styles/stack.css";
 
 const LastSection = () => {
   return (
-    <section className="h-dvh w-screen overflow-x-hidden stack">
+    <section id="hireme" className="h-dvh w-screen overflow-x-hidden stack">
       <div className="h-full w-full bg-carbon-mist flex items-center justify-center">
         {/* main container */}
         <div className="h-full w-full flex flex-col items-center justify-center">

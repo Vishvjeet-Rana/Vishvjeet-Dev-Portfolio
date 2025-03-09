@@ -5,7 +5,7 @@ import "./Styles/stack.css";
 
 const Projects = () => {
   return (
-    <section className="h-dvh w-screen overflow-x-hidden stack">
+    <section id="projects" className="h-dvh w-screen overflow-x-hidden stack">
       <div className="h-[100%] w-[100%] bg-carbon-mist flex items-center justify-center">
         <div className="w-full h-full  flex items-center justify-center flex-col">
           {/* part 1 - text */}

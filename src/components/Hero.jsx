@@ -43,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-dvh w-screen overflow-x-hidden stack">
+    <section id="hero" className="h-dvh w-screen overflow-x-hidden stack">
       {/* inner main category div which gonna hold the all content */}
       <div
         ref={sectionRef}
