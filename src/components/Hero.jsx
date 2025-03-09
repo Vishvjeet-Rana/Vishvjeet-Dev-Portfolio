@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import SplitText from "./SplitText";
+import "./Styles/stack.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="h-dvh w-screen overflow-x-hidden">
+    <section className="h-dvh w-screen overflow-x-hidden stack">
       {/* inner main category div which gonna hold the all content */}
       <div
         ref={sectionRef}

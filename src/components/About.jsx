@@ -5,13 +5,14 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import BlurText from "./BlurText";
 import GradientText from "./GradientText";
+import "./Styles/stack.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   return (
-    <section className="h-dvh w-screen overflow-x-hidden">
-      <div className="h-[100%] w-[100%] bg-carbon-mist flex flex-col lg:flex-row items-center justify-center">
+    <section className="h-dvh w-screen overflow-x-hidden stack">
+      <div className="stacking-section h-[100%] w-[100%] bg-carbon-mist flex flex-col lg:flex-row items-center justify-center">
         {/* left part */}
         <div className="w-[100%] h-[50%] lg:w-[50%] lg:h-[100%] flex flex-col items-center justify-end">
           {/* first text */}

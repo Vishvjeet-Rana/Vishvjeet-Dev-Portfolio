@@ -1,6 +1,7 @@
 import React from "react";
 import FuzzyText from "./FuzzyText";
 import FlowingMenu from "./FlowingMenu";
+import "./Styles/stack.css";
 
 const demoItems = [
   {
@@ -27,7 +28,7 @@ const demoItems = [
 
 const SoftSkills = () => {
   return (
-    <section className="h-dvh w-screen overflow-x-hidden">
+    <section className="h-dvh w-screen overflow-x-hidden stack">
       <div className="h-full w-full bg-deep-olive flex items-center justify-center">
         {/* main container */}
         <div className="h-[100%] w-[100%] flex flex-col items-center justify-center">

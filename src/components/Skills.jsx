@@ -1,6 +1,7 @@
 import React from "react";
 import SplitText from "./SplitText";
 import AnimatedList from "./AnimatedList";
+import "./Styles/stack.css";
 
 const items = [
   "----- FIRST SEE FRONT-END TECHNOLOGIES -----",
@@ -29,7 +30,7 @@ const items = [
 
 const Skills = () => {
   return (
-    <section className="h-dvh w-screen overflow-x-hidden">
+    <section className="h-dvh w-screen overflow-x-hidden stack">
       <div className="h-full w-full bg-vanilla-latte flex items-center justify-center">
         {/* main container */}
         <div className="flex flex-col lg:flex-row items-center justify-center h-[100%] w-[100%] p-5">
