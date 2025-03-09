@@ -12,7 +12,7 @@
   position: relative;
   cursor: pointer;
   transition: filter 0.3s ease, color 0.3s ease;
-  font-size: 4rem; /* Default: 6xl */
+  font-size: 3rem; /* Default: 6xl */
   font-weight: 800; /* Equivalent to font-extrabold */
   font-family: "Robert", sans-serif; /* Equivalent to font-robert-medium */
   color: #7d7d81; /* Equivalent to metallic gray */

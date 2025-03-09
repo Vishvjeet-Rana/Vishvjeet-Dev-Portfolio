@@ -1,45 +1,73 @@
 import React from "react";
 import SplitText from "./SplitText";
+import AnimatedList from "./AnimatedList";
+
+const items = [
+  "----- FIRST SEE FRONT-END TECHNOLOGIES -----",
+  "HTML",
+  "Vanilla CSS",
+  "JavaScript",
+  "React.js",
+  "Tailwind CSS",
+  "GSAP - Animations",
+  "React-bit-library",
+  "Material UI",
+  "API Handling",
+  "Three.js (Occasionly)",
+  "----- NOW SEE BACK-END TECHNOLOGIES -----",
+  "Node.js",
+  "Express.js",
+  "Mongo DB",
+  "REST APIs",
+  "Postman for API testing",
+  "Hoppscotch for API testing",
+  "----- OTHER TECH & TOOLS -----",
+  "Git & GitHub",
+  "Docker",
+  "VS Code",
+];
 
 const Skills = () => {
   return (
     <section className="h-dvh w-screen overflow-x-hidden">
       <div className="h-full w-full bg-vanilla-latte flex items-center justify-center">
         {/* main container */}
-        <div className="flex items-center justify-center h-[100%] w-[100%] p-5">
+        <div className="flex flex-col lg:flex-row items-center justify-center h-[100%] w-[100%] p-5">
           {/* left part - have skills  */}
-          <div className="w-[50%] h-[100%]"></div>
+          <div className=" w-[100%] h-[50%]  flex items-center justify-center lg:w-[50%] lg:h-[100%] overflow-hidden ">
+            <div className="h-full w-[100%] sm:w-[80%]  flex items-center justify-center">
+              <AnimatedList
+                items={items}
+                onItemSelect={(item, index) => console.log(item, index)}
+                showGradients={true}
+                enableArrowNavigation={true}
+                displayScrollbar={true}
+              />
+            </div>
+          </div>
 
           {/* right part - text */}
-          <div className="w-[50%] h-[100%] ">
+          <div className=" w-[100%] h-[50%] sm:w-[50%] sm:h-[100%] ">
             {/* holding text container */}
-            <div className="h-[60%] w-[100%] flex flex-col pl-5 items-start justify-start">
-              <p className="text-9xl  font-zentry font-extrabold text-expresso-brown">
-                Have
+            <div className="h-auto w-[100%] flex flex-col  items-start justify-start">
+              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
+                Here
               </p>
 
-              <p className="text-9xl  font-zentry font-extrabold text-expresso-brown">
-                A
+              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
+                My
               </p>
 
-              <p className="text-9xl  font-zentry font-extrabold text-expresso-brown">
-                Look.
+              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
+                Skills.
               </p>
 
               {/* some text */}
               <div className="mt-5">
-                {/* <p className="text-2xl italic font-light font-robert-medium text-dark-vanilla">
-                  These skills aren’t just things I’ve picked up—they're how I
-                  create, solve problems, and bring ideas to life. Whether it's
-                  structuring something from the ground up or refining the
-                  smallest details, I enjoy making things work seamlessly and
-                  feel just right.
-                </p> */}
-
                 <div>
                   <SplitText
                     text="These skills aren’t just things I’ve picked up—they're how I create, solve problems, and bring ideas to life. Whether it's structuring something from the ground up or refining the smallest details, I enjoy making things work seamlessly and feel just right."
-                    className="text-2xl italic font-light font-robert-medium text-dark-vanilla"
+                    className="text-xs sm:text-2xl italic font-light font-robert-medium text-dark-vanilla"
                     delay={10}
                     animationFrom={{
                       opacity: 0,

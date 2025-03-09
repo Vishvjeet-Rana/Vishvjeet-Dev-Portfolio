@@ -1,0 +1,80 @@
+.scroll-list-container {
+  position: relative;
+  width: 500px;
+}
+
+.scroll-list {
+  max-height: 80vh; /* Responsive height */
+  min-height: 200px; /* Prevents it from shrinking too much */
+  /* overflow-y: auto; */
+  padding: 16px;
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .scroll-list {
+    padding-top: 140px;
+    padding-bottom: 130px;
+  }
+}
+
+.scroll-list::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.scroll-list::-webkit-scrollbar-track {
+  background: #060606;
+}
+
+.scroll-list::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.item {
+  padding: 16px;
+  background-color: #574545;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+/* #574545 expresso */
+
+.item.selected {
+  background-color: #574545;
+}
+
+.item-text {
+  color: #f3e5c3;
+  font-family: robert-medium;
+  margin: 0;
+}
+
+.top-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}

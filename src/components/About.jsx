@@ -11,9 +11,9 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   return (
     <section className="h-dvh w-screen overflow-x-hidden">
-      <div className="h-[100%] w-[100%] bg-carbon-mist flex flex-col sm:flex-row items-center justify-center">
+      <div className="h-[100%] w-[100%] bg-carbon-mist flex flex-col lg:flex-row items-center justify-center">
         {/* left part */}
-        <div className="w-[100%] h-[50%] sm:w-[50%] sm:h-[100%] flex flex-col items-center justify-end">
+        <div className="w-[100%] h-[50%] lg:w-[50%] lg:h-[100%] flex flex-col items-center justify-end">
           {/* first text */}
           <div className="w-[100%] h-[20%] mb-2 flex items-center">
             <div>
