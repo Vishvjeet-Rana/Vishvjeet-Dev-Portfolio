@@ -58,6 +58,14 @@ const projects = [
     codeLink: "https://github.com/Vishvjeet-Rana/To-Do-List-JavaScript",
   },
   {
+    image: ecom,
+    title: "Ecommerce-site FrontEnd",
+    description:
+      "eCommerce frontend inspired by Amazon, built with React and Tailwind for a seamless shopping experience",
+    demoLink: "https://vishvjeet-rana.github.io/E-commerce-static-website/",
+    codeLink: "https://github.com/Vishvjeet-Rana/E-commerce-static-website",
+  },
+  {
     image: simonsays,
     title: "Simon Says Game",
     description:

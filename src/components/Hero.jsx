@@ -3,16 +3,10 @@ import BlurText from "./BlurText";
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import v0 from "../assets/v0.png";
-import v1 from "../assets/v1.jpg";
-import v2 from "../assets/v2.jpg";
-import v3 from "../assets/v3.png";
 import { ScrollTrigger } from "gsap/all";
 import SplitText from "./SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const images = [v3, v1, v2, v0];
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -52,7 +46,7 @@ const Hero = () => {
       {/* inner main category div which gonna hold the all content */}
       <div
         ref={sectionRef}
-        className=" h-full w-full bg-teal-forest flex items-center justify-center"
+        className="h-full w-full bg-teal-forest flex items-center justify-center"
       >
         {/* main work starts here */}
         <div className=" h-[90%] w-[95%] flex flex-col items-start justify-center">
