@@ -86,7 +86,7 @@ const Navbar = () => {
           {/* right side items of the navbar */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
-              {navItems.map((item, index) => (
+              {/* {navItems.map((item, index) => (
                 <a
                   href={`#${item.toLowerCase()}`}
                   className="nav-hover-btn px-4"
@@ -94,10 +94,10 @@ const Navbar = () => {
                 >
                   {item}
                 </a>
-              ))}
-              {/* <p className="mr-45 font-robert-medium text-sm">
+              ))} */}
+              <p className="mr-45 font-robert-medium text-lg">
                 Welcome To My Tech Space
-              </p> */}
+              </p>
             </div>
 
             {/* audio button */}
