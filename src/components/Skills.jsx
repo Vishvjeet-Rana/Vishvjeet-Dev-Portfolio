@@ -36,10 +36,11 @@ const Skills = () => {
         <div className="flex flex-col-reverse xl:flex-row items-center justify-center h-[100%] w-[100%] p-5">
           {/* left part - have skills  */}
           <div className=" w-[100%] h-[50%]  flex items-center justify-center lg:w-[50%] lg:h-[100%] overflow-hidden ">
-            <div className="h-full w-[100%] sm:w-[80%] flex flex-col items-center justify-center">
-              <p className="font-zentry text-lg text-expresso-brown font-bold">
+            <div className="h-full w-[100%] sm:w-[80%] flex xl:flex-col items-center justify-center">
+              <p className="w-[50%] font-zentry text-lg text-expresso-brown hidden xl:block">
                 Scroll to see my skills
               </p>
+
               <AnimatedList
                 items={items}
                 onItemSelect={(item, index) => console.log(item, index)}
@@ -72,7 +73,7 @@ const Skills = () => {
                   <SplitText
                     text="These skills aren’t just things I’ve picked up—they're how I create, solve problems, and bring ideas to life. Whether it's structuring something from the ground up or refining the smallest details, I enjoy making things work seamlessly and feel just right."
                     className="text-xs sm:text-2xl italic font-light font-robert-medium text-dark-vanilla"
-                    delay={10}
+                    delay={12}
                     animationFrom={{
                       opacity: 0,
                       transform: "translate3d(0,50px,0)",
