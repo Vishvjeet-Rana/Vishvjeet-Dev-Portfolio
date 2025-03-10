@@ -80,7 +80,7 @@ const Carousel = () => {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -340 : 340;
+      const scrollAmount = direction === "left" ? -220 : 220;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };

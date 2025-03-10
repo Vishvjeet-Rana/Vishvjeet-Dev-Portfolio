@@ -85,7 +85,7 @@ const Navbar = () => {
 
           {/* right side items of the navbar */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
+            <div className="hidden xl:block">
               {/* {navItems.map((item, index) => (
                 <a
                   href={`#${item.toLowerCase()}`}

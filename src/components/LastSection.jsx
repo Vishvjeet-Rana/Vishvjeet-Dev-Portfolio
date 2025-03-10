@@ -27,7 +27,7 @@ const LastSection = () => {
           {/* social icons */}
           <div className="h-[30%] w-[100%]  flex items-center justify-center">
             <div className="h-[30%] w-[70%] sm:h-[35%] sm:w-[20%] bg-alpine-frost rounded-4xl flex items-center justify-around">
-              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 cursor-pointer">
+              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 transform hover:-translate-y-3 cursor-pointer">
                 <a
                   href="https://x.com/RVishvjeet_/"
                   rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const LastSection = () => {
                   <FaXTwitter />
                 </a>
               </div>
-              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 cursor-pointer">
+              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 transform hover:-translate-y-3 cursor-pointer">
                 <a
                   href="https://github.com/Vishvjeet-Rana/"
                   rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const LastSection = () => {
                   <IoLogoGithub />
                 </a>
               </div>
-              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 cursor-pointer">
+              <div className="h-[90%] rounded-4xl w-[20%] text-5xl flex items-center justify-center text-carbon-mist hover:scale-125 duration-200 transition-all hover:text-blue-600 transform hover:-translate-y-3 cursor-pointer">
                 <a
                   href="https://www.linkedin.com/in/vishvjeet-rana/"
                   target="_blank"

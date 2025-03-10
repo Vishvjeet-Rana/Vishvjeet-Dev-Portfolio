@@ -47,10 +47,10 @@ const Hero = () => {
       {/* inner main category div which gonna hold the all content */}
       <div
         ref={sectionRef}
-        className="h-full w-full bg-teal-forest flex items-center justify-center"
+        className="h-full w-full bg-alpine-frost flex items-center justify-center"
       >
         {/* main work starts here */}
-        <div className=" h-[90%] w-[95%] flex flex-col items-start justify-center">
+        <div className=" h-[90%] w-[95%] flex flex-col items-start justify-center overflow-hidden mt-10">
           {/* first part */}
           <div className="mb-5 ">
             <div>
@@ -108,16 +108,16 @@ const Hero = () => {
           </div>
 
           {/* end part */}
-          <div className="mt-10 h-[30%] w-[90%] flex flex-col  justify-start sm:flex-row sm:items-center sm:justify-between ">
+          <div className="mt-5 h-[30%] w-[90%] flex flex-col  justify-start sm:flex-row sm:items-center sm:justify-between ">
             {/* para */}
             <p ref={paraRef} className="text-5xl font-zentry text-carbon-mist">
               PortFolio:VR01
             </p>
-            <div className="w-[100%] sm:w-[50%] flex flex-col  justify-start sm:flex-row sm:items-center sm:justify-between  ">
+            <div className="w-[100%] sm:w-[50%] flex flex-col justify-start sm:gap-10 sm:flex-row sm:items-center sm:justify-between">
               {/* fist item */}
               <div
                 ref={firstItemRef}
-                className="mt-10 flex flex-col  justify-center"
+                className="mt-4 flex flex-col  justify-center"
               >
                 <p className="text-lg sm:text-xl font-robert-medium font-semibold text-carbon-mist">
                   Contact:
@@ -132,7 +132,7 @@ const Hero = () => {
               {/* second item */}
               <div
                 ref={secondItemRef}
-                className="mt-10 flex flex-col justify-center"
+                className="mt-4 flex flex-col justify-center"
               >
                 <p className="text-lg sm:text-xl font-robert-medium font-semibold text-carbon-mist">
                   My Location:
@@ -143,7 +143,7 @@ const Hero = () => {
                     target="_blank"
                     className="text-lg sm:text-xl font-robert-medium text-carbon-mist"
                   >
-                    Location: 29.6873° N, 76.9901° E
+                    29.6873° N, 76.9901° E
                   </a>
                 </p>
               </div>

@@ -27,7 +27,7 @@ const Projects = () => {
           </div>
 
           {/* part 2 - glassmorphic div */}
-          <div className="w-[80%] h-[70%] rounded-3xl">
+          <div className="w-[100%] h-[70%] rounded-3xl">
             <div className="h-full w-full flex items-center rounded-3xl justify-center">
               <Carousel />
             </div>

@@ -33,10 +33,13 @@ const Skills = () => {
     <section id="skills" className="h-dvh w-screen overflow-x-hidden stack">
       <div className="h-full w-full bg-vanilla-latte flex items-center justify-center">
         {/* main container */}
-        <div className="flex flex-col lg:flex-row items-center justify-center h-[100%] w-[100%] p-5">
+        <div className="flex flex-col-reverse xl:flex-row items-center justify-center h-[100%] w-[100%] p-5">
           {/* left part - have skills  */}
           <div className=" w-[100%] h-[50%]  flex items-center justify-center lg:w-[50%] lg:h-[100%] overflow-hidden ">
-            <div className="h-full w-[100%] sm:w-[80%]  flex items-center justify-center">
+            <div className="h-full w-[100%] sm:w-[80%] flex flex-col items-center justify-center">
+              <p className="font-zentry text-lg text-expresso-brown font-bold">
+                Scroll to see my skills
+              </p>
               <AnimatedList
                 items={items}
                 onItemSelect={(item, index) => console.log(item, index)}

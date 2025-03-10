@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const About = () => {
   return (
     <section id="about" className="h-dvh w-screen overflow-x-hidden stack">
-      <div className="stacking-section h-[100%] w-[100%] bg-carbon-mist flex flex-col lg:flex-row items-center justify-center">
+      <div className="stacking-section h-[100%] w-[100%] bg-carbon-mist flex flex-col xl:flex-row items-center justify-center">
         {/* left part */}
         <div className="w-[100%] h-[50%] lg:w-[50%] lg:h-[100%] flex flex-col items-center justify-end">
           {/* first text */}
