@@ -89,9 +89,10 @@ const About = () => {
                 giving 3D and realistic feel to websites.
               </p>
               <p className="font-robert-medium text-sm sm:text-2xl text-metallic-gray">
-                I'm diving into the world of AI to add smarter features to
-                websites. It's all about making web apps more helpful and
-                responsive in simple ways.
+                I'm diving into the world of{" "}
+                <span className="text-blue-tint">Artificial Intelligence</span>{" "}
+                to add smarter features to websites. It's all about making web
+                apps more helpful and responsive in simple ways.
               </p>
             </div>
           </div>

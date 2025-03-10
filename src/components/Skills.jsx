@@ -4,7 +4,7 @@ import AnimatedList from "./AnimatedList";
 import "./Styles/stack.css";
 
 const items = [
-  "----- FIRST SEE FRONT-END TECHNOLOGIES -----",
+  "----- FIRST SEE MY FRONT-END SKILLS -----",
   "HTML",
   "Vanilla CSS",
   "JavaScript",
@@ -14,8 +14,8 @@ const items = [
   "React-bit-library",
   "Material UI",
   "API Handling",
-  "Three.js (Occasionly)",
-  "----- NOW SEE BACK-END TECHNOLOGIES -----",
+  "Three.js & React three fibre/drei (Occasionally)",
+  "----- NOW SEE MY BACK-END SKILLS -----",
   "Node.js",
   "Express.js",
   "Mongo DB",

@@ -18,9 +18,9 @@ const LastSection = () => {
             <p className="font-robert-medium text-alpine-frost text-3xl sm:text-6xl font-bold">
               Your wait ends here.
             </p>
-            <p className="font-robert-medium text-sm font-semibold italic text-metallic-gray">
-              Fun Fact : I am a time traveller, but you wouldn't believe me
-              because I'm not famous yet.
+            <p className="font-robert-medium text-sm font-semibold text-metallic-gray">
+              I am a time traveller, but you wouldn't believe me because I'm not
+              famous yet.
             </p>
           </div>
 

@@ -5,4 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/Vishvjeet-Dev-Portfolio/",
+  build: {
+    outDir: "./docs", // More explicit relative path
+    sourcemap: true,
+  },
 });
