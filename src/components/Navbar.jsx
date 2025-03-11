@@ -29,10 +29,10 @@ const Navbar = () => {
     }
 
     // user scrolling up
-    else if (currentScrollY < lastScrollY) {
-      setIsNavVisible(true);
-      navContainerRef.current.classList.add("floating-nav");
-    }
+    // else if (currentScrollY < lastScrollY) {
+    //   setIsNavVisible(true);
+    //   navContainerRef.current.classList.add("floating-nav");
+    // }
 
     setLastScrollY(currentScrollY);
   }, [currentScrollY, lastScrollY]);
@@ -52,6 +52,7 @@ const Navbar = () => {
     setIsIndicatorActive((prev) => !prev);
   };
 
+  //  for audio
   useEffect(() => {
     if (isAudioPlaying) {
       audioElementRef.current.play();
@@ -95,7 +96,7 @@ const Navbar = () => {
                   {item}
                 </a>
               ))} */}
-              <p className="mr-45 font-robert-medium text-lg">
+              <p className="mr-45 font-robert-medium text-lg font-semibold">
                 Welcome To My Tech Space
               </p>
             </div>

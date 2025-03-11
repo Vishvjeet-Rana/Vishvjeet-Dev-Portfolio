@@ -258,6 +258,13 @@ body {
   transform: translate(-50%, -50%);
 }
 
+@utility special-font {
+  & b {
+    font-family: "Zentry";
+    font-feature-settings: "ss01" on;
+  }
+}
+
 @utility flex-center {
   display: flex;
   justify-content: center;

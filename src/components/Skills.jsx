@@ -55,16 +55,16 @@ const Skills = () => {
           <div className=" w-[100%] h-[50%] sm:w-[50%] sm:h-[100%] ">
             {/* holding text container */}
             <div className="h-auto w-[100%] flex flex-col  items-start justify-start">
-              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
-                Here
+              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold special-font text-expresso-brown">
+                H<b>e</b>r<b>e</b>
               </p>
 
-              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
-                My
+              <p className="text-6xl sm:text-9xl  font-zentry special-font font-extrabold text-expresso-brown">
+                <b>M</b>y
               </p>
 
-              <p className="text-6xl sm:text-9xl  font-zentry font-extrabold text-expresso-brown">
-                Skills.
+              <p className="text-6xl sm:text-9xl special-font  font-zentry font-extrabold text-expresso-brown">
+                S<b>k</b>ill<b>s</b>.
               </p>
 
               {/* some text */}
@@ -72,7 +72,7 @@ const Skills = () => {
                 <div>
                   <SplitText
                     text="These skills aren’t just things I’ve picked up—they're how I create, solve problems, and bring ideas to life. Whether it's structuring something from the ground up or refining the smallest details, I enjoy making things work seamlessly and feel just right."
-                    className="text-xs sm:text-2xl italic font-light font-robert-medium text-dark-vanilla"
+                    className="text-xs sm:text-2xl font-robert-medium text-dark-vanilla"
                     delay={12}
                     animationFrom={{
                       opacity: 0,

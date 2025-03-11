@@ -110,8 +110,11 @@ const Hero = () => {
           {/* end part */}
           <div className="mt-5 h-[30%] w-[90%] flex flex-col  justify-start sm:flex-row sm:items-center sm:justify-between ">
             {/* para */}
-            <p ref={paraRef} className="text-5xl font-zentry text-carbon-mist">
-              PortFolio:VR01
+            <p
+              ref={paraRef}
+              className="text-5xl font-zentry special-font text-carbon-mist"
+            >
+              P<b>o</b>rt<b>F</b>oli<b>o</b>:<b>V</b>R01
             </p>
             <div className="w-[100%] sm:w-[50%] flex flex-col justify-start sm:gap-10 sm:flex-row sm:items-center sm:justify-between">
               {/* fist item */}
